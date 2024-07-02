@@ -2,6 +2,7 @@ ola mundo
 ola mundo novo
 foo
 bar
+ola mundo
 teste
 foo
 aaa
