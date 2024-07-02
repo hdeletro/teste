@@ -8,11 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
       - name: merge
         run: |
-          git switch dev
+          git fetch origin
+          git checkout dev
           git pull
-          git switch master
+          git checkout master
           git pull
           git rebase dev
           git push
