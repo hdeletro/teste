@@ -1,4 +1,5 @@
 ola mundo
 ola mundo novo
 foo
+bar
 teste
