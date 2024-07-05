@@ -1,0 +1,13 @@
+name: Runs workflow on push to master
+
+on:
+  push:
+    branches: ['master']
+  workflow_dispatch:
+
+jobs:
+  test-on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
