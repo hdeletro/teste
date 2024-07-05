@@ -6,17 +6,19 @@ on:
 jobs:
   merge-dev-onto-master:
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
-            fetch-depth: 0
+          fetch-depth: 0
+          persist-credentials: false
 
       - name: Set up Git user
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "actions@github.com"
-          
+
       - name: Merge dev onto master
         run: |
           git fetch origin
