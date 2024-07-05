@@ -6,9 +6,7 @@ on:
 jobs:
   merge-dev-onto-master:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      checks: write
+    permissions: write-all
     steps:
       - uses: actions/checkout@v4
         with:
