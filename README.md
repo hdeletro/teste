@@ -7,3 +7,5 @@ Testando os tipos de merges
 adicao 1
 
 feature 1
+
+feature 5
